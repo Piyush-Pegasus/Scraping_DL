@@ -1,0 +1,13 @@
+prefix=D:/python_dev/DL_SCRAP/venv/Library
+exec_prefix=D:/python_dev/DL_SCRAP/venv/Library
+libdir=D:/python_dev/DL_SCRAP/venv/Library/lib
+sharedlibdir=D:/python_dev/DL_SCRAP/venv/Library/lib
+includedir=D:/python_dev/DL_SCRAP/venv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
