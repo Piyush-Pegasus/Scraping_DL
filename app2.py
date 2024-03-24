@@ -77,6 +77,11 @@ class DrivingLicenseChecker:
             "current_status": None,
             "holder_name": None,
             "old_new_dl_no": None,
+            "source_of_data": None,
+            "initial_issue_date": None,
+            "initial_issuing_office": None,
+            "last_endorsed_date": None,
+            "last_endorsed_office": None,
             "last_completed_transaction": None,
             "driving_license_validity_details": {
                 "non_transport": {
@@ -101,6 +106,16 @@ class DrivingLicenseChecker:
                 data["holder_name"] = line.split("Holder's Name ")[1]
             elif "Old / New DL No." in line:
                 data["old_new_dl_no"] = line.split("Old / New DL No. ")[1]
+            elif "Source Of Data" in line:
+                data["source_of_data"]=line.split("Source Of Data ")[1]
+            elif "Initial Issue Date" in line:
+                data["initial_issue_date"] = line.split("Initial Issue Date ")[1]
+            elif "Initial Issuing Office" in line:
+                data["initial_issuing_office"] = line.split("Initial Issuing Office ")[1]
+            elif "Last Endorsed Date" in line:
+                data["last_endorsed_date"] = line.split("Last Endorsed Date ")[1]
+            elif "Last Endorsed Office" in line:
+                data["last_endorsed_office"] = line.split("Last Endorsed Office ")[1]
             elif "Last Completed Transaction" in line:
                 data["last_completed_transaction"] = line.split("Last Completed Transaction ")[1]
             elif "Non-Transport From:" in line:
