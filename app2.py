@@ -35,7 +35,7 @@ class DrivingLicenseChecker:
 
     def check_license_status(self):
         self.driver.get(self.url)
-        time.sleep(4)  # Wait for the page to load
+        time.sleep(2)  # Wait for the page to load
 
         captcha_image_element = self.driver.find_element(By.XPATH,"//img[@id='form_rcdl:j_idt31:j_idt36']")
         captcha_image_url = captcha_image_element.get_attribute("src")
